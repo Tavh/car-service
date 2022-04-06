@@ -3,13 +3,14 @@ package com.tav.carservice.controller;
 import com.tav.carservice.model.CarEntity;
 import com.tav.carservice.service.CarService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("car")
 @RestController
-@RequiredArgsConstructor
 public class CarController {
-    private final CarService carService;
+    @Autowired
+    private CarService carService;
 
     @PostMapping
     public void createCar(@RequestBody final CarEntity car) {
