@@ -30,4 +30,5 @@ public class CarEntity {
     private int numOfSeats;
     @Column(name = "is_automatic", nullable = false)
     private boolean isAutomatic;
+
 }

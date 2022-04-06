@@ -3,7 +3,6 @@ package com.tav.carservice.controller;
 import com.tav.carservice.model.CarEntity;
 import com.tav.carservice.service.CarService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("car")
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 public class CarController {
     private final CarService carService;
 
-    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public void createCar(@RequestBody final CarEntity car) {
         carService.createCar(car);
